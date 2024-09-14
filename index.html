@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Cricket Pulse : Watch & Enjoy!</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Highlights</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Bookings</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(https://w0.peakpx.com/wallpaper/984/45/HD-wallpaper-cricket-ball-bails-football-sports-sports-equipment-thumbnail.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Welcome to CricketPlus,enjoy!</span>
+			            <h1 class="mb-4 mt-3"><span>Live details = Real joy</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Bats swing and wickets fall,',
+						'CricketPulse covers it all.',
+						'Every match, every cheer,',
+                        'Our platform, always near!',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>"Ultimate destination for all cricket updates,scores & live action!"</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="" class="btn btn-primary py-3 px-4"> SIGN UP</a>           
+						                           	<a href="" class="btn btn-primary py-3 px-4"> SIGN IN</a> 
+						</div>
+		          </div>
+ 	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="https://img.freepik.com/premium-photo/red-cricket-ball-with-word-cricket-bottom_1191909-4042.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Match Coverage: </span> <span>Saini makes a stand for India B, but Rahul helps steer India A ahead</span></p>
+										<p><span class="title-s">Featured:</span> <span>Powerplay podcast: Ultimate allrounders - juggling cricket and motherhood</span></p>
+										</div>
+									</div>
+								  </div>
+								  <br>
+								  <br>
+
+								<div class="skill-mf">
+									<h2><p class="title-s">Latest updates/scores:-</p></h2>
+									<span>Total</span> <span class="pull-right">115</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0"
+											aria-valuemax="200"></div>
+									</div>
+									
+									<span>Wickets</span> <span class="pull-right">7</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="200"></div>
+									</div>
+									<span>Overs</span> <span class="pull-right">25</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+											aria-valuemax="200"></div>
+									</div>
+									
+									<span>Last Innings</span> <span class="pull-right">193</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="200"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Us</h2>
+								
+								<p>CricketPulse delivers live scores, updates, and thrilling match insights from every corner of the cricket world. Stay connected with the game, anytime, anywhere!
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<h3>Some mind twister questions:</h3>
+								 <li class="d-flex"><span>Duckworth?</span> <span>Refers to the Duckworth-Lewis method, challenging users to recall or explain the context.</span></li> 
+									<li class="d-flex"><span>Googly?</span> <span>A type of delivery bowled by a leg-spinner that spins in the opposite direction to a normal leg-spin, surprising the batsman.</span></li>
+									<li class="d-flex"><span>Maiden?</span> <span>An over in which no runs are scored by the batsman.</span></li>
+									<li class="d-flex"><span> Yorker?</span> <span>A delivery that is pitched right at the batsman’s feet, making it difficult to hit.</span></li>
+									 <li class="d-flex"><span>Chinaman?</span> <span>A left-arm wrist spinner’s delivery that spins from right to left </span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<br>
+								<br>
+								<br>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Live</h1>
+            <h2 class="mb-4">Live</h2>
+			<p><a href="" class="btn btn-primary py-3 px-3">Watch live stream here</a></p>
+          
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Fan Reactions:-</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">ABC</span>
+						<h2>2X/1X/20XX</h2>
+						<span class="position">Cricket Pulse
+							 is my go-to platform for all things 
+							 cricket! The website offers live match
+							updates with accurate stats and real-time
+							scores. I love how detailed the player profiles 
+							and match summaries are. The highlights section
+							is a great addition, especially the quick access.</span>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">XYZ</span>
+						<h2>06/09/2024</h2>
+						<span class="position">Cricket Pulse has become an essential part of my cricket-following routine. 
+							The live score updates are always timely and precise, and the detailed player stats are incredibly
+							 helpful for fans who love to dive into the numbers. I appreciate the thorough match summaries.</span>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+ <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Bookings for your daily schedule</h1>
+            <h2 class="mb-4">Bookings done?</h2>
+            <p>Below are the samples of Special Dishes Just to Temp your Mouth & Stomach...</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLI0YzR8LG0BMcBz9i857mxZ9r2LcsQzpxqw&s');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"> Match Tickets.</a></h3>
+                <p>Purchase crickets for live cricket matches.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3drYX5joguO3i23SGIXAFOjI4UG1ia_Oeqg&s');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Membership Live.</a></h3>
+                <p>Join fan club & memberships for exclusive content & perks.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="" class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxl3hi_RnhsSBhTrWfMG60FMUwqR9rU9zShg&s');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="">Venue Tours</a></h3>
+                <p>Book tours of cricket stadiums or training facilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the latest schemes -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="" class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiiK5De3sIInFtJIGMVvp7yQkQjlALxMnXbQ&s');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">Corporate Hospitality Packages</a></h3>
+				<p>Reserve packages for coorporate events,including premium seating & catering.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="" class="block-20 zoom-effect" style="background-image: url('data:image/jpeg;base64,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');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">Meet & Greet</a></h3>
+			<p>Book tickets for fan events where you can meet players.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(data:image/jpeg;base64,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EFe5XwqWSm6oyqW+2zSDHaiA4QQdov61MMeJn/W/5vf8UuFnt8+qfZpfgC5tdhblsSI0qjHDeDTiRukEdhXDz5+eu+xS8lGXQzj1UxxURRFnGxFERVlRREFRREFRREBERB9p5buKY5qTjapPv9FEZTjapPLdxUnGxJxtQWUlYz7/AETHNBZ5buKTjapjipONioylZ0KxY9jxcWua8bi0ggnuXxOq7G9bHyVk7Jtam00qdN0iCHSXyAJDgTM3+KSLj0ZUKxa0NAAuAAA3AKhbaajyrYjZ69SifoOIb1+yb2HtaQuJK9R8IVCLRTqSPaphpE+1LXEyRrghwv3FeWWGVlRFEHZ5Hy3XspPREFpvcxwLmE7QARB3jxXpcnZ9NLotFPRHU5hLwPtNN/dPBeHRXRuSy2qnVYH0nh7T1tMjkdy+q198H1J/6S94B0BTLXHU3SJbog7TAdw7VsFajUfKrZqb3Ne5jS5hlji0FzduidYWvM+/np+7peq2O5wGsxeBeYvNwC1zn589P3dL/JSpXnURFlBERAREQEREBERAREQZyixlERUURFVRREFRREFQa561EQfTpn6HR6TtA62aR0TeDe3VrA7llRtdVghlSo0bG1HMHcCviiCucSSSSSdZJkniTrUREBERAREQd3mzl42R5DtJ1J0lzWhpOlEBwkjzXa1c+36XsUW6MmNJxDi3qmLgdW1ePRXR2tsy7Vq2ptpd9BzHsp6RLG6MXDjffvXxy3lN1qrGs5ob7LWgAl1wnr69ZXARAREUBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//2Q==)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Can Review us on<span> Google</span> </h2>
+						<div class="heading"> <h4> Your positive reviews motivates <em>"US"</em> </h4>
+						<br>
+						<p><a href="" class="btn btn-primary py-3 px-5">REVIEW HERE</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact US</h2>
+            <p>Below are the details to reach out to US!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Konkani, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+ 91 101 0101 101</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">cricketpulse009@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Want Special????</h3>
+	            <p><a href="#">"Find it on on Highlights Section"</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <!-- <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2> -->
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find us on  </li>
+					  <li class="ftco-animate"><a href=""><span class="icon-youtube"></span></a></li> 
+					  <li class="ftco-animate"><a href=""><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href=""><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href=""><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by SAMIKSHYA</a>
+	</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
